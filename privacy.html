@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'">
+  <meta name="description" content="AIRI Second Brain 個人 Google Drive 筆記同步隱私說明。">
+  <title>隱私說明 · AIRI Second Brain</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到內容 / Skip to content</a>
+  <header class="shell"><p class="eyebrow">PERSONAL PROJECT · 個人自用</p><nav aria-label="主要導覽"><a href="index.html">首頁 Home</a><a aria-current="page" href="privacy.html">隱私 Privacy</a><a href="terms.html">使用說明 Use</a></nav></header>
+  <main id="main" class="shell">
+    <p class="draft">適用範圍：個人 Drive 筆記同步 / Personal Drive note sync</p>
+    <h1>隱私說明 <span lang="en">Privacy notice</span></h1>
+    <p class="lead">AIRI Second Brain</p>
+    <p>維護者：此個人自用專案的擁有者。生效日期：2026-10-19。</p>
+    <p lang="en">Maintained by the owner of this personal project. Effective date: 2026-10-19.</p>
+    <section class="card">
+      <h2>1. 已知用途與存取資料 / Known use and data access</h2>
+      <p>已知用途為使用 rclone 讀取使用者授權的 Google Drive 筆記，並同步到自己的電腦。這可能涉及筆記內容，以及讀取與同步所需的檔案名稱、識別碼與其他中繼資料。</p>
+      <p lang="en">The known use is to read the user's authorized Google Drive notes with rclone and sync them to the user's own computer. This may involve note contents, filenames, identifiers, and other metadata needed to read and sync files.</p>
+      <p>目前同步工具要求 drive.readonly 唯讀權限，可讀取授權帳戶的 Drive 檔案內容與中繼資料，不能上傳、修改或刪除 Drive 檔案。本機同步設定只選取指定研究資料夾內的 Markdown 筆記；此資料夾篩選不是 Google OAuth 權限邊界。</p>
+      <p lang="en">The sync tool requests the drive.readonly scope, permitting read access to Drive content and metadata for the authorized account, without uploading, modifying, or deleting Drive files. Local sync settings select Markdown notes in a designated research folder. This folder filter is not a Google OAuth permission boundary.</p>
+    </section>
+    <section>
+      <h2>2. 儲存、保留與移除 / Storage, retention, and removal</h2>
+      <p>同步結果存放在自己的電腦。保留多久由使用者自行管理，本說明沒有設定自動刪除期限。停止同步或撤銷授權不會自動刪除已下載的副本；不再需要時，須自行移除電腦上的副本，並另行檢查備份。</p>
+      <p lang="en">Synced copies are stored on the user's own computer. The user manages retention; this notice defines no automatic deletion period. Stopping sync or revoking access does not automatically delete downloaded copies. Remove unwanted local copies and review backups separately.</p>
+      <p>OAuth 授權資料由本機 rclone 工具處理並保存在本機設定檔；已核對 Mac 設定檔權限只允許該 macOS 使用者讀寫。本網站不接收或儲存 OAuth 憑證、授權碼或筆記。這項檔案權限檢查不代表對整套系統的安全稽核。</p>
+      <p lang="en">OAuth authorization material is handled by rclone and stored in its local configuration. The inspected Mac configuration permits read and write access only to its macOS owner. This website does not receive or store OAuth credentials, authorization codes, or notes. This file-permission check is not a system-wide security audit.</p>
+    </section>
+    <section>
+      <h2>3. 後續處理與分享 / Further processing and sharing</h2>
+      <p>本說明只涵蓋已知的 Google Drive → 自己電腦同步。尚未核實 AIRI、AI 模型供應商、外掛、記錄與備份等後續處理，因此不宣稱整套系統的資料都留在本機，也不對其保存、轉傳或訓練用途作出保證。這些功能的資料處理須另行核對，本網站沒有提供這些功能。</p>
+      <p lang="en">This notice covers only the known Google Drive-to-own-computer sync. Further handling by AIRI, AI providers, plugins, logs, or backups has not been verified. It makes no system-wide promise about local-only processing, retention, onward transfer, or training. Those features require a separate review of actual data handling and recipients; this website does not provide them.</p>
+    </section>
+    <section>
+      <h2>4. 撤銷授權 / Revoking access</h2>
+      <p>使用者可在 Google 帳戶的第三方應用程式與服務連線管理中，找到對應應用名稱並撤銷存取權，也可停止本機同步工作。撤銷後無法再依該授權取得新資料，但已下載副本仍須自行管理。</p>
+      <p lang="en">Revoke the corresponding app's access in your Google Account's third-party connections settings, and stop local sync jobs. Revocation prevents future access through that grant; downloaded copies still need to be managed separately.</p>
+    </section>
+    <section>
+      <h2>5. 網站訪客 / Website visitors</h2>
+      <p>本靜態網站程式不收集訪客資料，不設表單、不使用 cookies 或瀏覽器儲存，也沒有分析工具、廣告、追蹤器或第三方腳本。瀏覽頁面不會授權 Google Drive 或觸發筆記同步。</p>
+      <p lang="en">This static site's code collects no visitor data. It has no forms, cookies, browser storage, analytics, advertising, trackers, or third-party scripts. Viewing a page does not authorize Google Drive or trigger note sync.</p>
+      <p>本網站使用 GitHub Pages 託管。GitHub 可能為提供及保護服務處理 IP 位址等連線資料，依其自身隱私政策處理；「網站程式不收集」並非託管平台不記錄的保證。</p>
+      <p lang="en">This website is hosted on GitHub Pages. GitHub may process connection data such as IP addresses to provide and protect its service under its own privacy policy. No collection by this site's code does not imply that the host keeps no logs.</p>
+    </section>
+    <aside class="note">
+      <h2>聯絡方式 / Contact</h2>
+      <p>可透過<a href="https://github.com/d198843-ship-it/airi-second-brain-sync/issues">專案 Issues</a>聯絡維護者。請勿公開筆記內容、帳戶資訊、授權碼或憑證。</p>
+      <p lang="en">Contact the maintainer through the <a href="https://github.com/d198843-ship-it/airi-second-brain-sync/issues">project issue tracker</a>. Do not post note contents, account information, authorization codes, or credentials.</p>
+    </aside>
+  </main>
+  <footer class="shell"><a href="index.html">返回首頁 / Home</a><a href="terms.html">使用說明 / Use</a><span>2026-10-19</span></footer>
+</body>
+</html>
